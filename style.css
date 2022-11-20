@@ -1,6 +1,17 @@
+body {
+	background-image: url(assets/wordle.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+	background-color: antiquewhite;
+}
+
 h1 {
 	text-align: center;
+	color: black;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
 }
+
 #game-board {
 	display: flex;
 	align-items: center;
@@ -8,7 +19,7 @@ h1 {
 }
 
 .letter-box {
-	border: 2px solid gray;
+	border: 2px solid;
 	border-radius: 3px;
 	margin: 2px;
 	font-size: 2.5rem;
@@ -27,4 +38,28 @@ h1 {
 
 .letter-row {
 	display: flex;
+}
+#keyboard-cont {
+	margin: 1rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#keyboard-cont div {
+	display: flex;
+}
+
+.second-row {
+	margin: 0.5rem 0;
+}
+
+.keyboard-button {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 0.5rem;
+	margin: 0 2px;
+	cursor: pointer;
+	text-transform: uppercase;
 }
