@@ -96,6 +96,18 @@ function checkGuess() {
 
 		if (letterPosition === -1) {
 			letterColor = 'gray';
+		} else {
+			if (currentGuess[i] === rightGuess[i]) {
+				letterColor = 'green';
+			} else {
+				letterColor = 'yellow';
+			}
+			rightGuess[letterPosition] = '#';
 		}
+		let delay = 250 * i;
+		setTimeout(() => {
+			box.style.backGroundColor = letterColor;
+			shadeKeyBoard(letter, letterColor);
+		}, delay);
 	}
 }
