@@ -110,4 +110,18 @@ function checkGuess() {
 			shadeKeyBoard(letter, letterColor);
 		}, delay);
 	}
+	if (guessString === rightGuessString) {
+		alert('To prawidłowe słowo! Gratulacje!');
+		guessesRemaining = 0;
+		return;
+	} else {
+		guessesRemaining--;
+		currentGuess = [];
+		nextLetter = 0;
+
+		if (guessesRemaining === 0) {
+			alert('Wykorzystałeś wszystkie szanse! Koniec gry!');
+			alert(`Prawidłowe słowo to "${rightGuessString}"`);
+		}
+	}
 }
