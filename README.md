@@ -2,7 +2,7 @@
 
 A fun game clone with base of 5-letter English words. Helps my kids to get familiar with English language.
 
-**Link to project** https://cool-palmier-1479d2.netlify.app/
+**Link to project** https://worldle-clone.netlify.app
 
 **Tech used:** HTML, CSS, vanilla JavaScript
 
