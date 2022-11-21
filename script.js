@@ -100,7 +100,7 @@ function checkGuess() {
 			letterColor = 'grey';
 		} else {
 			if (currentGuess[i] === rightGuess[i]) {
-				letterColor = 'green';
+				letterColor = 'lightgreen';
 			} else {
 				letterColor = 'yellow';
 			}
@@ -124,6 +124,22 @@ function checkGuess() {
 		if (guessesRemaining === 0) {
 			alert('Wykorzystałeś wszystkie szanse! Koniec gry!');
 			alert(`Prawidłowe słowo to "${rightGuessString}"`);
+		}
+	}
+}
+
+function shadeKeyBoard(letter, color) {
+	for (const elem of document.getElementsByClassName('keyboard-button')) {
+		if (elem.textContent === letter) {
+			let oldColor = elem.style.backgroundColor;
+			if (oldColor === 'lightgreen') {
+				return;
+			}
+			if (oldColor === 'yellow' && color !== 'lightgreen') {
+				return;
+			}
+			elem.style.backgroundColor = color;
+			break;
 		}
 	}
 }
