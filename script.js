@@ -5,6 +5,7 @@ let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
+
 console.log(rightGuessString);
 
 function initBoard() {
@@ -56,6 +57,7 @@ function insertLetter(pressedKey) {
 
 	let row = document.getElementsByClassName('letter-row')[6 - guessesRemaining];
 	let box = row.children[nextLetter];
+	box.textContent = pressedKey;
 	box.classList.add('filled-box');
 	currentGuess.push(pressedKey);
 	nextLetter++;
