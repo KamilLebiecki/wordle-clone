@@ -97,7 +97,7 @@ function checkGuess() {
 		let letterPosition = rightGuess.indexOf(currentGuess[i]);
 
 		if (letterPosition === -1) {
-			letterColor = 'gray';
+			letterColor = 'grey';
 		} else {
 			if (currentGuess[i] === rightGuess[i]) {
 				letterColor = 'green';
@@ -108,7 +108,7 @@ function checkGuess() {
 		}
 		let delay = 250 * i;
 		setTimeout(() => {
-			box.style.backGroundColor = letterColor;
+			box.style.backgroundColor = letterColor;
 			shadeKeyBoard(letter, letterColor);
 		}, delay);
 	}
